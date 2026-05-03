@@ -1,1 +1,6 @@
+=== DSL Compiler Input Program ===
 
+a = 3
+b = 7
+c = a + b
+d = c * 2
