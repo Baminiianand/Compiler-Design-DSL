@@ -1,1 +1,32 @@
+**DSL COMPILER SIMULATION**
 
+**Problem Understanding**
+
+This program simulates a simple Domain Specific Language (DSL) compiler using the C 
+programming language. The aim is to demonstrate how a compiler processes a small program 
+step-by-step through different phases. 
+The given input program consists of simple assignment and arithmetic operations: - "a = 3" - "b = 7" - "c = a + b" - "d = c * 2" 
+The program mimics how a compiler analyzes and executes these statements. 
+
+**Logic Used**
+
+The implementation is divided into multiple compiler phases: 
+a) Input Program 
+The program first displays the predefined input statements using "printf()". These statements 
+represent the source code given to the compiler. 
+b) Lexical Analysis - Identifies basic elements (tokens) of the program:  - Identifiers: "a, b, c, d" - Constants: "3, 7, 2" - Operators: "+, *" - This phase breaks the program into meaningful components. 
+c) Syntax Analysis - Checks whether the statements follow correct grammar rules. - Recognizes valid patterns like: - Assignment ("a = constant") - Arithmetic expressions ("c = a + b", "d = c * 2") - Ensures that the structure of each statement is correct. 
+d) Semantic Analysis - Verifies the meaning of the statements. - Checks: - Variable types (all integers) - Valid operations between variables - Confirms that operations like addition and multiplication are valid. 
+e) Intermediate Code Generation - Converts high-level statements into intermediate representation: - "t1 = a + b" - "c = t1" - "t2 = c * 2" - "d = t2" - This step simplifies execution and is used in real compilers. 
+f) Execution Phase - Performs actual computation: - "c = a + b" - "d = c * 2" - Values are calculated using C variables. 
+g) Output - Displays the final results: - Value of "c" - Value of "d" - Prints a success message indicating compilation completion. 
+Justification of Features 
+This program uses simple arithmetic expressions to clearly demonstrate compiler phases: - Easy to identify tokens (Lexical Analysis) - Simple grammar rules (Syntax Analysis) - Straightforward type checking (Semantic Analysis) 
+- Clear intermediate representation (Code Generation) 
+No complex threshold is used; instead, correctness is ensured through: - Valid syntax - Proper type usage - Correct computation 
+
+**Conclusion**
+
+This program effectively demonstrates how a compiler processes a program through multiple 
+stages. It provides a clear understanding of compiler design concepts in a simplified and 
+structured manner.
